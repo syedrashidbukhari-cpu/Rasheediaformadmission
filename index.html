@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rasheedia Institute Of Qira'at And Tehfeez-Ul-Quran</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@600&family=Noto+Nastaliq+Urdu&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <button class="lang-toggle" onclick="toggleLang()">اردو / English</button>
+
+  <header>
+    <h1>Rasheedia Institute Of Qira'at And Tehfeez-Ul-Quran</h1>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2 lang="en">Welcome to Rasheedia Institute</h2>
+      <h2 lang="ur">راشدیہ انسٹیٹیوٹ آف قراءت و تحفظ القرآن میں خوش آمدید</h2>
+      <p lang="en">Where Quran meets the heart ❤️</p>
+      <p lang="ur">جہاں قرآن دلوں کو روشن کرتا ہے ❤️</p>
+    </div>
+  </section>
+
+  <div class="verse">
+    اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ
+  </div>
+
+  <section class="container about">
+    <h2 lang="en">About Us</h2>
+    <h2 lang="ur">ہمارے بارے میں</h2>
+    <p lang="en">
+      Rasheedia Institute Of Qira'at And Tehfeez-Ul-Quran is dedicated to teaching Qira’at, Tajweed, and Hifz with spiritual excellence and Islamic guidance.
+    </p>
+    <p lang="ur">
+      راشدیہ انسٹیٹیوٹ قراءت، تجوید اور حفظ القرآن کی تعلیم میں روحانی اور علمی معیار کو فروغ دینے کے لیے کوشاں ہے۔
+    </p>
+  </section>
+
+  <section class="container form-section">
+    <h2 lang="en">Admission Form</h2>
+    <h2 lang="ur">داخلہ فارم</h2>
+    <p lang="en">Fill the form below to apply via WhatsApp 📱</p>
+    <p lang="ur">نیچے فارم پُر کریں تاکہ واٹس ایپ کے ذریعے داخلہ لیں 📱</p>
+
+    <form id="whatsappForm">
+      <input type="text" id="name" placeholder="Full Name / مکمل نام" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number / آپ کا نمبر" required>
+      <select id="course" required>
+        <option value="">Select Course / کورس منتخب کریں</option>
+        <option>Hifz-ul-Quran</option>
+        <option>Tajweed</option>
+        <option>Qira'at</option>
+        <option>Arabic</option>
+      </select>
+      <textarea id="message" placeholder="Your Message / پیغام" rows="3"></textarea>
+      <button type="submit">Send Admission Request on WhatsApp 💬</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Rasheedia Institute Of Qira'at And Tehfeez-Ul-Quran — All Rights Reserved
+  </footer>
+
+  <script>
+    function toggleLang() {
+      document.body.classList.toggle("urdu-active");
+    }
+
+    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const course = document.getElementById("course").value;
+      const message = document.getElementById("message").value;
+
+      const text = `Assalamualaikum! 👋%0AMy Name: ${name}%0APhone: ${phone}%0ACourse: ${course}%0AMessage: ${message}`;
+      const url = `https://wa.me/923457999942?text=${text}`; // Replace with your WhatsApp number
+
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

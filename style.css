@@ -1,0 +1,203 @@
+/* Base Setup */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #022c22, #064e3b);
+  background-image: url('https://img.freepik.com/free-vector/islamic-background-green-golden_1048-12833.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  transition: 0.4s ease;
+}
+
+/* Header */
+header {
+  background: rgba(6, 78, 59, 0.95);
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 26px;
+  color: #facc15;
+  letter-spacing: 1px;
+}
+
+/* Language Toggle */
+.lang-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #facc15;
+  border: none;
+  color: #064e3b;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.lang-toggle:hover {
+  background: #eab308;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin: 0;
+  text-shadow: 2px 2px 8px black;
+}
+
+.hero p {
+  color: #facc15;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Verse Animation */
+.verse {
+  text-align: center;
+  font-family: 'Reem Kufi', 'Noto Nastaliq Urdu', serif;
+  font-size: 30px;
+  color: #facc15;
+  margin: 35px 10px;
+  text-shadow: 0 0 10px #facc15, 0 0 20px #fef08a;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #facc15, 0 0 20px #fef08a; opacity: 0.8; }
+  to { text-shadow: 0 0 30px #fde68a, 0 0 50px #facc15; opacity: 1; }
+}
+
+/* Containers */
+.container {
+  background: rgba(0, 0, 0, 0.65);
+  margin: 40px auto;
+  padding: 30px;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.container h2 {
+  font-family: 'Reem Kufi', sans-serif;
+  color: #facc15;
+  text-align: center;
+  font-size: 24px;
+}
+
+.container p {
+  color: #d1fae5;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  background: rgba(255,255,255,0.25);
+}
+
+button {
+  background: linear-gradient(90deg, #16a34a, #15803d);
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #65a30d, #4d7c0f);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(6, 78, 59, 0.9);
+  color: #d1fae5;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+/* Urdu Language Switch */
+[lang="ur"] {
+  font-family: 'Noto Nastaliq Urdu', serif;
+  direction: rtl;
+  text-align: right;
+  display: none;
+  font-size: 20px;
+}
+
+.urdu-active [lang="ur"] { display: block; }
+.urdu-active [lang="en"] { display: none; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .verse {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
